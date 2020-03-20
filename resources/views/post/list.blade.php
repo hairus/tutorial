@@ -9,9 +9,10 @@
                     <ul>
                         @php $no = 1; @endphp
                         @foreach ( $users as $user)
-                        <li>{{$no++ . ' - '. $user->name }}</li>
+                        <li>{{$user->id . ' - '. $user->name }}</li>
                         @endforeach
                     </ul>
+                    <hr>
                 </div>
             </div>
         </div>

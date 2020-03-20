@@ -36,21 +36,22 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <nav class="navbar navbar-default">
-                            <div class="container-fluid">
-                                <ul class="nav navbar-nav">
-                                    <li class="active"><a href="{{ url('/home')}}">Home</a></li>
-                                    <li><a href="{{ url('/list')}}">list User</a></li>
-                                    <li><a href="#">Page 2</a></li>
-                                    <li><a href="#">Page 3</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav mr-auto">
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="{{ url('/home')}}">Home</a></li>
+                                        <li><a href="{{ url('/list')}}">list User</a></li>
+                                        <li><a href="{{ url('/input')}}">Input</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </ul>
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">

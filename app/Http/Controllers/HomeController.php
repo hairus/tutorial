@@ -25,18 +25,31 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->id != 1) {
-            return redirect('http://google.com');
-        } else {
-            return view('home');
-        }
+
+        return view('home');
     }
 
     public function list()
     {
         // dd('ini kesini');
-        $users = User::all();
+        $users = User::get();
 
         return view('post/list', compact('users'));
+    }
+
+    public function input()
+    {
+        return view('input');
+    }
+
+    public function save(Request $request)
+    {
+        $simpan = new User();
+        $simpan->name = $request->nama;
+        $simpan->email = $request->emailla;
+        $simpan->password = bcrypt($request->passwordta);
+        $simpan->save();
+
+        return redirect('/list');
     }
 }
